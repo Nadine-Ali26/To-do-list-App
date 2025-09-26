@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./sign-up.js"></script>
+    <script defer src="./script.js"></script>
+</head>
+<style>
+    .hidden{
+        display:none;
+        background-color: rgb(63, 63, 255);
+    }
+</style>
+<body background="./app2.avif" style="padding: 50px;" dir="rtl" >
+    <div class="btns" style="display: flex; gap:30px; margin:30px; ">
+    <button id="signup" type="button" style="width: 100px; height:50px; font-size: 20px; border-radius: 10px;">انشاء حساب</button>
+    <button id="login"  type="button" style="width: 100px; height:50px; font-size: 20px; border-radius: 10px;">تسجيل الدخول</button>
+    <button id="langEn" type="button"  style="border-radius: 20px; width:50px" onclick="location.href='./index.html'" >En</button>
+    </div>
+
+    <h1 style="text-align: center; color:brown;">مدير المهام</h1>
+    <div  style="display:flex; justify-content: center; align-items: center;" >
+    <input type="text" style="width: 300px; height: 30px; font-size: 20px;"id="input">
+    <button id="Add" style="height: 35px; width:100px">ضافة</button>
+    </div>
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    </div>
+
+<!-- signup & login -->
+<div style="text-align: center;"  class="hidden" id="signupForm">
+    <h1>انشاء حساب</h1>
+    <form>
+        <div>
+            <label for="Uname">اسم المستخدم</label>
+            <input type="text" placeholder="اسم المستخدم" id="signup_name" name="uname" style="margin: 10px 30px;" required>
+        </div>
+        <div>
+            <label for="email">البريد الالكتروني</label>
+            <input type="text" placeholder="البريد الالكتروني" id="email" name="email" style="margin: 10px 30px" required>
+        </div>
+        <div>
+            <label for="password">كلمة المرور</label>
+            <input type="password" placeholder="كلمةالمرور" id="signup_password" name="password" style="margin: 10px 30px" required>
+        </div>
+        <button id="signupBtn" style="margin:10px 20px; width:100px; height: 30px; font-size: 20px; border-radius: 10px; cursor: pointer;">تسجيل</button>
+    </form>
+        <p>  لديك حساب بالفعل؟  <a href="#" id="loginLink"  style="text-decoration: none;"> تسجيل الدخول</a> </p>
+</div>
+
+<div style="text-align: center;"  class="hidden" id="loginForm">
+            <h1>تسجيل الدخول</h1>
+        <form>
+            <div>
+                <label for="Uname">اسم المستخدم</label>
+                <input type="text" placeholder="اسم المستخدم" id="login_name" name="uname"style="margin: 10px 30px;" required>
+            </div>
+            <div>
+                <label for="password">كلمة المرور</label>
+                <input type="password" placeholder="كلمة المرور" id="login_password" name="password" style="margin: 10px 30px" required>
+            </div>
+            <button id="loginBtn" style="margin:10px 20px; width:100px; height: 30px; font-size: 20px; border-radius: 10px; cursor: pointer;">تسجيل</button>
+        </form>
+            <p> جديد هنا؟<a href="#" id="signupLink" style="text-decoration: none;"> انشاء حساب </a> </p>
+    </div>
+</body>
+</html> 

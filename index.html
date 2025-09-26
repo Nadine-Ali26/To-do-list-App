@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <script defer src="./sign-up.js"></script>
+    <script defer src="./script.js"></script> 
+
+</head>
+
+<style>
+    .hidden{
+        display:none;
+        background-color: rgb(63, 63, 255);
+    }
+</style>
+<body background="./app2.avif" style="padding: 50px;" dir="ltr">
+    <div class="btns" style="display: flex; gap:30px; margin:30px; ">
+    <button id="signup" style="width: 100px; height:50px; font-size: 20px; border-radius: 10px;">Sign up</button>
+    <button id="login" style="width: 100px; height:50px; font-size: 20px; border-radius: 10px;">Log in</button>
+    <button id="lang"  type="button"  style="border-radius: 20px; width:50px" onclick="location.href='./index_in_ar.html'">ع</button>
+    </div>
+
+    <h1 style="text-align: center; color:brown;" id="title" >To Do List App</h1>
+    <div  style="display:flex; justify-content: center; align-items: center;" >
+    <input type="text" style="width: 300px; height: 30px; font-size: 20px;"id="input">
+    <button id="Add" style="height: 35px; width:100px">Add</button>
+    </div>
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    </div>
+
+<!-- signup & login -->
+<div style="text-align: center;"  class="hidden" id="signupForm">
+    <h1 id="title_signup">Sign-Up</h1>
+    <form>
+        <div>
+            <label for="Uname" class="usernameSignup">Username</label>
+            <input type="text" placeholder="User name" id="signup_name" name="uname" style="margin: 10px 30px;" required>
+        </div>
+        <div>
+            <label for="email" class="email">Email</label>
+            <input type="text" placeholder="Email" id="email" name="email" style="margin: 10px 30px" required>
+        </div>
+        <div>
+            <label for="password" id="pass">Password</label>
+            <input type="password" placeholder="Password" id="signup_password" name="password" style="margin: 10px 30px" required>
+        </div>
+        <button id="signupBtn" style="margin:10px 20px; width:100px; height: 30px; font-size: 20px; border-radius: 10px; cursor: pointer;">Submit</button>
+    </form>
+        <p id="HaveAccount"> Already have an accout?<a href="#" id="loginLink"  style="text-decoration: none;"> Login</a> </p>
+</div>
+
+<div style="text-align: center;"  class="hidden" id="loginForm">
+            <h1 id="title_signup">Log-in</h1>
+        <form>
+            <div>
+                <label for="Uname" id="usernameLogin">Username</label>
+                <input type="text" placeholder="User name" id="login_name" name="uname"style="margin: 10px 30px;" required>
+            </div>
+            <div>
+                <label for="password" id="passwordLogin">Password</label>
+                <input type="password" placeholder="Password" id="login_password" name="password" style="margin: 10px 30px" required>
+            </div>
+            <button id="loginBtn" style="margin:10px 20px; width:100px; height: 30px; font-size: 20px; border-radius: 10px; cursor: pointer;">Submit</button>
+        </form>
+            <p> New here?<a href="#" id="signupLink" style="text-decoration: none;"> Sign-up</a> </p>
+    </div>
+</body>
+</html>
